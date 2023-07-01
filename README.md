@@ -26,3 +26,10 @@ python app.py
 ```
 
 The application will start running on http://localhost:5000. Open this URL in your web browser to access the application.
+
+## Screenshots
+
+![Index](C:\Users\gui38\Documents\Sistemas de Informação\Sistemas para Internet II\CRUD Gerenciamento de Estoque\screenshots\1.png)
+![Inserting product](C:\Users\gui38\Documents\Sistemas de Informação\Sistemas para Internet II\CRUD Gerenciamento de Estoque\screenshots\2.png)
+![Removing product](C:\Users\gui38\Documents\Sistemas de Informação\Sistemas para Internet II\CRUD Gerenciamento de Estoque\screenshots\3.png)
+![Editing products](C:\Users\gui38\Documents\Sistemas de Informação\Sistemas para Internet II\CRUD Gerenciamento de Estoque\screenshots\4.png)
