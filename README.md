@@ -29,7 +29,7 @@ The application will start running on http://localhost:5000. Open this URL in yo
 
 ## Screenshots
 
-![Index](screenshots\1.png)
-![Inserting product](screenshots\2.png)
-![Removing product](screenshots\3.png)
-![Editing products](screenshots\4.png)
+![Index](screenshots/1.png)
+![Inserting product](screenshots/2.png)
+![Removing product](screenshots/3.png)
+![Editing products](screenshots/4.png)
