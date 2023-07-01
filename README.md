@@ -15,3 +15,14 @@ You can install these dependencies by running the following command:
 
 ```shell
 pip install -r requirements.txt
+```
+
+## Usage
+
+To run the application, execute the following command:
+
+```shell
+python app.py
+```
+
+The application will start running on http://localhost:5000. Open this URL in your web browser to access the application.

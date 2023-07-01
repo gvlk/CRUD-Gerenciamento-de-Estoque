@@ -7,6 +7,10 @@
     <orderEntry type="jdk" jdkName="Python 3.11 (CRUD Gerenciamento de Estoque)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="versionSpecifier" value="Greater or equal (&gt;=x.y.z)" />
+    <option name="keepMatchingSpecifier" value="false" />
+  </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
