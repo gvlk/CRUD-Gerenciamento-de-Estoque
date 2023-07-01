@@ -1,7 +1,14 @@
-<form method="POST" action="{{ url_for('remove') }}">
-  <div class="form-group">
-    <label for="product_id">ID:</label>
-    <input type="number" class="form-control" id="product_id" name="product_id" placeholder="Insira o ID" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Apagar</button>
-</form>
+<div class="position-fixed top-50 translate-middle-y" style="left: 75vw">
+    <div class="bg-white rounded border p-3">
+        <form method="POST" action="{{ url_for('remove') }}" class="align-items-center">
+            <div class="col-auto">
+                <label for="product_id">ID:</label>
+                <input type="number" class="form-control-sm" id="product_id" name="product_id" placeholder="Insira o ID"
+                       required>
+            </div>
+            <div class="col-auto mt-2">
+                <button type="submit" class="btn btn-danger">Remover</button>
+            </div>
+        </form>
+    </div>
+</div>
