@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <body>
-    <h1>Gerenciamento de Estoque</h1>
-
-    <table>
-        <thead>
+<div class="w-auto container-lg m-3 p-3 navbar-nav-scroll rounded border border-2 shadow-sm">
+    <table class="table table-striped">
+        <thead class="table-dark">
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -16,66 +14,66 @@
         </thead>
 
         {% if not update %}
-            <tbody>
-            {% for product in data %}
-                <tr>
-                    <td>{{ "{:0>5}".format(product.productid) }}</td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.price }}</td>
-                    <td>{{ product.quantity }}</td>
-                    <td>{{ product.lastupdated }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
+        <tbody>
+        {% for product in data %}
+        <tr>
+            <td>{{ "{:0>5}".format(product.productid) }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.lastupdated }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
         {% else %}
-            <tbody>
-            {% for product in data %}
-                <form method="POST" action="{{ url_for('update') }}" id="form{{ product.productid }}"></form>
-                <tr>
-                    <td>
-                        <input type="text" name="product_id" value="{{ "{:0>5}".format(product.productid) }}"
-                               readonly form="form{{ product.productid }}">
-                    </td>
-                    <td>
-                        <input type="text" name="name" value="{{ product.name }}" required
-                               form="form{{ product.productid }}">
-                    </td>
-                    <td>
-                        <input type="number" name="price" value="{{ product.price }}" step="0.01" required
-                               form="form{{ product.productid }}">
-                    </td>
-                    <td>
-                        <input type="number" name="quantity" value="{{ product.quantity }}" required
-                               form="form{{ product.productid }}">
-                    </td>
-                    <td>
-                        <input type="text" name="lastupdated" value="{{ product.lastupdated }}" readonly
-                               form="form{{ product.productid }}">
-                    </td>
-                    <td>
-                        <button type="submit" form="form{{ product.productid }}">Atualizar</button>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
+        <tbody>
+        {% for product in data %}
+        <form method="POST" action="{{ url_for('update') }}" id="form{{ product.productid }}"></form>
+        <tr>
+            <td>
+                <input type="text" name="product_id" value="{{ "{:0>5}".format(product.productid) }}"
+                readonly form="form{{ product.productid }}">
+            </td>
+            <td>
+                <input type="text" name="name" value="{{ product.name }}" required
+                       form="form{{ product.productid }}">
+            </td>
+            <td>
+                <input type="number" name="price" value="{{ product.price }}" step="0.01" required
+                       form="form{{ product.productid }}">
+            </td>
+            <td>
+                <input type="number" name="quantity" value="{{ product.quantity }}" required
+                       form="form{{ product.productid }}">
+            </td>
+            <td>
+                <input type="text" name="lastupdated" value="{{ product.lastupdated }}" readonly
+                       form="form{{ product.productid }}">
+            </td>
+            <td>
+                <button type="submit" form="form{{ product.productid }}" class="btn btn-dark">Atualizar</button>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
         {% endif %}
     </table>
-
+</div>
+<div class="container m-1 p-3">
     {% if insert %}
-        {% include "insert.html" %}
+    {% include "insert.html" %}
     {% endif %}
     {% if remove %}
-        {% include "remove.html" %}
+    {% include "remove.html" %}
     {% endif %}
 
-    <a href="{{ url_for('generate_random_data') }}">Gerar dados de teste</a>
+    <a href="{{ url_for('generate_random_data') }}" class="btn btn-primary">Gerar dados de teste</a>
 
-    {% if not insert %}<a href="/insert">Inserir produto</a>{% endif %}
-    {% if not remove %}<a href="/remove">Remover produto</a>{% endif %}
+    {% if not insert %}<a href="/insert" class="btn btn-primary">Inserir produto</a>{% endif %}
+    {% if not remove %}<a href="/remove" class="btn btn-primary">Remover produto</a>{% endif %}
 
-    {% if not update %}<a href="/update">Editar produtos</a>
-    {% else %}<a href="/">Finalizar edição</a>
+    {% if not update %}<a href="/update" class="btn btn-primary">Editar produtos</a>
+    {% else %}<a href="/" class="btn btn-success">Finalizar edição</a>
     {% endif %}
-
-    </body>
+</div>
 {% endblock %}

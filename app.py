@@ -1,5 +1,3 @@
-import flask_sqlalchemy.query
-
 from setup_database import setup_database
 from flask import Flask, render_template, request, redirect, url_for, flash, Response
 from flask_sqlalchemy import SQLAlchemy
@@ -106,7 +104,7 @@ def generate_random_data() -> Response:
     return redirect(url_for("index"))
 
 
-def get_data() -> flask_sqlalchemy.query.Query:
+def get_data():
     return Product.query.order_by(Product.name)
 
 
@@ -114,4 +112,4 @@ if __name__ == "__main__":
     print("Criando banco de dados...")
     setup_database()
     print("Banco de dados pronto!")
-    app.run(debug=True)
+    app.run()
